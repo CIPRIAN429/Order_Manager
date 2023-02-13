@@ -1,0 +1,8 @@
+Pasare Catalin-Ciprian 334CB
+							Tema_2_APD
+
+
+	Exista 2 clase in tema, Tema2 se ocupa de thread-uri de nivel 1, iar Thread_Level2 de thread-uri de nivel 2.
+In clasa Tema2 citesc argumentele din linia de comanda si pornesc cele P thread-uri de nivel 1. In metoda run() se
+citesc comenzile din fisierul orders.txt, iar zona in care se face citirea este sincronizata la nivel de clasa, astfel ca thread-urile intra pe rand in regiunea critica, cel mai rapid citind prima comanda. Dupa ce un thread a preluat comanda, acesta va porni in continuare nr thread-uri de nivel 2, apoi, inainte de a afisa in fisier comanda livrata va inchide thread-urile de nivel 2. La nivelul 2 de paralelizare fiecare thread isi va cauta produsul in lista de produse,
+citirea se va face ca inainte, iar dupa ce il gaseste va scrie il va scrie in fisierul de output corespunzator. Accesul la instructiunile din metoda run() de la acest nivel este restrictionat de catre un semafor care accepta maxim P thread-uri concomitent. Semaforul este declarat in clasa Tema2. 					
